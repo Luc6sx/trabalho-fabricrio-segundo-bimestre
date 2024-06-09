@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css header/style.css">
+    <title>Editais</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #157BF2;
+    padding: 10px 20px;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header img {
+    height: 50px;
+}
+
+header h1 {
+    margin-left: 20px;
+}
+
+nav {
+    background-color: #157BF2;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.container {
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edital {
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.edital h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.edital .status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.edital .status.aberto {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.edital .status.fechado {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.edital a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.detalhes {
+    display: none;
+    margin-top: 10px;
+}
+
+.detalhes p {
+    margin: 5px 0;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-container button {
+    padding: 8px 15px;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.btn-container button:hover {
+    background-color: #155a9c;
+}
+
+.btn-container .btn-fechar {
+    background-color: #f44336;
+}
+
+.btn-container .btn-fechar:hover {
+    background-color: #d32f2f;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        margin-top: 120px;
+        padding: 10px;
+    }
+
+    .edital {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .edital h2 {
+        font-size: 16px;
+    }
+
+    .edital .status {
+        font-size: 10px;
+        padding: 3px 7px;
+    }
+
+    .btn-container button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .user-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-info img {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+
+    .btn-container button {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    .btn-container .btn-fechar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        height: 40px;
+    }
+
+    header h1 {
+        font-size: 14px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    .edital h2 {
+        font-size: 14px;
+    }
+
+    .edital .status {
+        font-size: 8px;
+        padding: 2px 5px;
+    }
+
+    .btn-container button {
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../imagens/Sem título.png" alt="logo fortes">
+        <nav>
+            <ul>
+                <li><a href="">A Fortes</a></li>
+                <li><a href="">Setores de Atuação</a></li>
+                <li><a href="">Soluções Fortes</a></li>
+                <li><a href="" style="border-bottom: rgb(255, 255, 255) solid 2px;">Projetos Sociais</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <div class="asd">
+                <span><b>Usuario</b></span>
+                <span>Ídolo</span>
+            </div>
+            <img src="../imagens/basket.jpg" alt="Juliana">
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">A Fortes</a></li>
+            <li><a href="#">Setores de Atuação</a></li>
+            <li><a href="#">Soluções Fortes</a></li>
+            <li><a href="#" style="border-bottom: black solid 2px;">Projetos Sociais</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="edital">
+            <h2>Edital n° 0068 aberto! Leia e mande seu projeto</h2>
+            <div class="status aberto">EDITAL ABERTO</div>
+            <a href="#" onclick="toggleDetalhes(event, 'detalhes-1')">CLIQUE AQUI</a>
+            <div class="detalhes" id="detalhes-1">
+                <p>Este Edital Tem Como Objetivo Selecionar E Financiar Iniciativas Inovadoras Que Contribuam Para A Melhoria Da Saúde E O Bem-Estar De Comunidades Em Situação De Vulnerabilidade Socioeconômica. Os Projetos Devem Abordar Questões Relevantes Para A Promoção Da Saúde, Prevenção De Doenças, Acesso A Serviços De Saúde, Educação Em Saúde, Entre Outros Temas Pertinentes.</p>
+                <p><strong>Critérios De Avaliação:</strong></p>
+                <ul>
+                    <li>Relevância E Impacto Do Projeto Na Comunidade Atendida.</li>
+                    <li>Coerência Com As Temáticas Prioritárias Estabelecidas.</li>
+                    <li>Viabilidade Técnica E Financeira Da Proposta.</li>
+                    <li>Potencial De Replicabilidade E Sustentabilidade Do Projeto.</li>
+                    <li>Envolvimento Da Comunidade No Desenvolvimento E Implementação Das Atividades.</li>
+                </ul>
+                <p><strong>Calendário:</strong></p>
+                <p>Lançamento Do Edital: 26/05/2024</p>
+                <p>Prazo Para Submissão: 26/06/2024</p>
+                <p>Anúncio Dos Projetos Selecionados: 10/07/2024</p>
+                <div class="btn-container">
+                    <button onclick="fazered()">FAZER FORMULÁRIO</button>
+                    <button class="btn-fechar" onclick="toggleDetalhes(event, 'detalhes-1')">FECHAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="edital">
+            <h2>Edital n° 0052 FECHADO! Leia e mande seu projeto</h2>
+            <div class="status fechado">EDITAL FECHADO</div>
+            <a href="#" onclick="toggleDetalhes(event, 'detalhes-2')">CLIQUE AQUI</a>
+            <div class="detalhes" id="detalhes-2">
+                <p>Detalhes do edital 0052...</p>
+                <div class="btn-container">
+                    <button>FAZER FORMULÁRIO</button>
+                    <button class="btn-fechar" onclick="toggleDetalhes(event, 'detalhes-2')">FECHAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="edital">
+            <h2>Edital n° 0061 aberto! Leia e mande seu projeto</h2>
+            <div class="status aberto">EDITAL ABERTO</div>
+            <a href="#" onclick="toggleDetalhes(event, 'detalhes-3')">CLIQUE AQUI</a>
+            <div class="detalhes" id="detalhes-3">
+                <p>Detalhes do edital 0061...</p>
+                <div class="btn-container">
+                    <button>FAZER FORMULÁRIO</button>
+                    <button class="btn-fechar" onclick="toggleDetalhes(event, 'detalhes-3')">FECHAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function fazered() {
+            window.location.href = 'cadastro_do_edital.html';
+        }
+
+        function toggleDetalhes(event, detalhesId) {
+            event.preventDefault();
+            const detalhes = document.getElementById(detalhesId);
+            detalhes.style.display = detalhes.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
