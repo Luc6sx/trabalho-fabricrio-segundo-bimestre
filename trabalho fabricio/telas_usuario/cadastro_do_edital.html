@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut" href="">
+    <title>Cadastro Do Edital</title>
+    <style>
+     * {
+            font-family: Arial, sans-serif;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #157BF2;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        header li {
+            text-decoration: none;
+        }
+
+        nav ul {
+            background-color: #157BF2;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 15px;
+        }
+
+        header img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        header a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        nav li:hover {
+            border-bottom: 2px solid rgb(255, 255, 255);
+        }
+
+        form textarea {
+            width: 100%;
+            max-width: 800px;
+            height: 200px;
+            margin: 10px 0;
+        }
+
+        form {
+            margin-top: 200px;
+        }
+
+        .add {
+            border: black solid 1px;
+            border-radius: 15px;
+            max-width: 800px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .add img {
+            width: 20px;
+            height: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .conte {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .formulario {
+            border: black solid 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .na {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .na a {
+            width: 100%;
+            max-width: 270px;
+        }
+
+        .bt {
+            display: flex;
+            gap: 10px;
+        }
+
+        .td {
+            margin: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cont {
+            background-color: #157BF2;
+            color: white;
+            border-color: white;
+            padding: 10px;
+            border-radius: 15px;
+            font-size: large;
+        }
+
+        .volt {
+            background-color: #157BF2;
+            color: white;
+            border-color: white;
+            padding: 10px 30px;
+            border-radius: 15px;
+            font-size: large;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #157BF2;
+            }
+
+           #asd{
+                display: block;
+                background-color: #157BF2;
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+
+        .etapa1 {
+            background-color: rgb(77, 77, 77);
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .etapa2 {
+            background-color: rgb(77, 77, 77);
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .etapa3 {
+            background-color: rgb(77, 77, 77);
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .line1, .line2 {
+            width: 50px;
+            height: 1px;
+            background-color: rgb(77, 77, 77);
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .progresso {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ep1 {
+            padding: 5px;
+            border: solid rgb(1, 199, 1) 1px;
+            border-radius: 50%;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 800px;
+            height: 200px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            input[type="text"],
+            textarea {
+                max-width: 100%;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead th {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            background-color: #e0e0e0;
+        }
+
+        tbody td {
+            border: 1px solid #000;
+            padding: 8px;
+            height: 40px;
+        }
+
+        tbody tr td {
+            text-align: center;
+        }
+
+        .arquivos-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .arquivo {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .arquivo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .arquivo .excluir {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            
+        }
+        .asd{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        .user-info img{
+            border-radius: 50%;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../imagens/Sem título.png" alt="logo fortes">
+        <button class="menu-button" id="asd" onclick="toggleMenu()">Menu</button>
+        <nav>
+            <ul>
+                <li><a href="">A Fortes</a></li>
+                <li><a href="">Setores de Atuação</a></li>
+                <li><a href="">Soluções Fortes</a></li>
+                <li><a href="" style="border-bottom: rgb(255, 255, 255) solid 2px;">Projetos Sociais</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <div class="asd">
+                <span><b>Usuario</b></span>
+                <span>Ídolo</span>
+            </div>
+            <img src="../imagens/basket.jpg" alt="Juliana">
+        </div>
+    </header>
+    <div>
+    <div class="conte"></div>
+    <form action="" id="form1">
+        <div class="formulario td">
+            <div class="progresso">
+                <div class="ep1">
+                    <div class="etapa1"></div>
+                </div>
+                <div class="line1" style=""></div>
+                <div class="etapa2"></div>
+                <div class="line2"></div>
+                <div class="etapa3"></div>
+            </div>
+            <div class="td">
+                <h3>Resumo do Projeto</h3>
+                <p>Descreva abaixo algumas informações sobre o projeto, como qual é o projeto, seus objetivos, público alvo a ser atingido, região de atuação, entre outras informações desejáveis</p>
+                <textarea name="" id="resumo_projeto"></textarea>
+            </div>
+            <div class="na">
+                <h3>Adicione Fotos/Vídeos do Projeto</h3>
+                <label for="file-input" class="add">SELECIONAR ARQUIVO
+                    <img src="../imagens/arq.png" alt="foto de um arquivo">
+                </label>
+                <input type="file" id="file-input" accept="image/*,video/*" style="display: none;">
+                <!-- Contêiner para as fotos e vídeos -->
+                <div class="arquivos-container"></div>
+            </div>
+            <div class="bt">
+                    
+                    <button type="button" class="cont" onclick="showForm(2)">CONTINUAR</button>
+                </div>
+        </div>
+    </form>
+        <form action="" id="form2" style="display: none;">
+            <div class="formulario td">
+                <div class="progresso">
+                    <div class="etapa1" style="background-color: rgb(1, 199, 1); padding: 8px 13px;">✓</div>
+                    <div class="line1" style="background-color: rgb(1, 199, 1);"></div>
+                    <div class=" ep1">
+                        <div class="etapa2"></div>
+                    </div>
+                    <div class="line2"></div>
+                    <div class="etapa3"></div>
+                </div>
+                <div class="td et2">
+                    <div style="display: flex;">
+                        <div>
+                            <h4>meta:</h4>
+                            <input type="text" size="60" style="margin: 15px 0px;">
+                        </div>
+                        <div>
+                            <h4>valor R$:</h4>
+                            <input type="text" style="margin: 15px 0px;">
+                        </div>
+                    </div>
+                    <h4>indicador(es)</h4>
+                    <input type="text" size="90" style="margin: 15px 0px;">
+                    <h4>metodolofia de execução:</h4>
+                    <input type="text" size="90" style="margin: 15px 0px;">
+                </div>
+                <div class="bt">
+                    <button type="button" class="volt" onclick="showForm(1)">VOLTAR</button>
+                    <button type="button" class="cont" onclick="showForm(3)">CONTINUAR</button>
+                </div>
+            </div>
+        </form>
+        <form action="" id="form3" style="display: none;">
+            <div class="formulario td">
+                <div class="progresso">
+                    <div class="etapa1" style="background-color: rgb(1, 199, 1); padding: 8px 13px;">✓</div>
+                    <div class="line1" style="background-color: rgb(1, 199, 1); "></div>
+                    <div class="etapa2" style="background-color: rgb(1, 199, 1); padding: 8px 13px;">✓</div>
+                    <div class="line2" style="background-color: rgb(1, 199, 1);"></div>
+                    <div class="ep1">
+                        <div class="etapa3"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2>CRONOGRAMA FÍSICO-FINANCEIRO DE EXECUÇÃO DO PROJETO</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ETAPAS</th>
+                                <th>VALOR</th>
+                                <th>INÍCIO</th>
+                                <th>TÉRMINO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Adicione linhas conforme necessário -->
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bt" style="margin-top: 20px;">
+                    <button type="button" class="volt" onclick="showForm(2)">VOLTAR</button>
+                    <button type="submit" class="cont">FINALIZAR</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function toggleMenu() {
+            var menu = document.querySelector('nav ul');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        }
+    function showForm(formNumber) {
+    const forms = document.querySelectorAll('form');
+    forms.forEach((form, index) => {
+        if (index + 1 === formNumber) {
+            form.style.display = 'block';
+            // Rolando a página para o topo do formulário atual
+            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            form.style.display = 'none';
+        }
+    });
+}
+
+   
+   
+        function toggleMenu() {
+            const navUl = document.querySelector("nav ul");
+            navUl.style.display = navUl.style.display === "flex" ? "none" : "flex";  
+            const screenWidth = window.innerWidth;
+            const asdButton = document.getElementById("asd");
+
+    if (screenWidth > 768) {
+        navUl.style.display = "none"; // Ocultar o menu
+        asdButton.style.display = "none"; // Ocultar o botão de menu
+    }
+            }
+            
+
+            document.addEventListener("DOMContentLoaded", function () {
+    const fileInput = document.getElementById("file-input");
+    const arquivosContainer = document.querySelector(".arquivos-container");
+
+    fileInput.addEventListener("change", function (event) {
+        const files = event.target.files;
+
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+
+            if (file.type.startsWith('image/') || file.type.startsWith('video/')) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const div = document.createElement("div");
+                    div.classList.add("arquivo");
+
+                    if (file.type.startsWith('image/')) {
+                        const img = document.createElement("img");
+                        img.src = e.target.result;
+                        div.appendChild(img);
+                    } else if (file.type.startsWith('video/')) {
+                        const video = document.createElement("video");
+                        video.src = e.target.result;
+                        video.controls = true;
+                        div.appendChild(video);
+                    }
+
+                    const excluir = document.createElement("div");
+                    excluir.classList.add("excluir");
+                    excluir.textContent = "X";
+                    excluir.addEventListener("click", function () {
+                        div.remove();
+                    });
+
+                    div.appendChild(excluir);
+                    arquivosContainer.appendChild(div);
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
+    });
+});
+window.addEventListener('resize', () => {
+            const nav = document.querySelector('nav ul');
+            const button = document.getElementById('asd');
+            if (window.innerWidth > 768) {
+                nav.style.display = 'flex';
+                button.style.display = 'none';
+            } else {
+                nav.style.display = 'none';
+                button.style.display = 'block';
+            }
+        });   
+    </script>
+</script>
+</html>

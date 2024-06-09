@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+        }
+
+        header .logo h1 {
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header .user-info span {
+            margin-left: 10px;
+        }
+
+        header .user-info img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .filter {
+            margin-bottom: 20px;
+        }
+
+        .filter label {
+            margin-right: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        .status .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .waiting {
+            background-color: yellow;
+        }
+
+        .completed {
+            background-color: green;
+        }
+
+        .denied {
+            background-color: red;
+        }
+
+        .pending {
+            background-color: gray;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .pagination-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .items-per-page {
+            display: flex;
+            align-items: center;
+        }
+
+        .items-per-page label {
+            margin-right: 10px;
+        }
+
+        header img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .asd {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            table th, table td {
+                padding: 5px;
+            }
+
+            .pagination {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .pagination-buttons {
+                margin-top: 10px;
+            }
+
+            .items-per-page {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header .user-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header .user-info span {
+                margin-left: 0;
+            }
+        }
+
+        nav li:hover {
+            border-bottom: white solid 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../imagens/Sem título.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Editais</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Financeiro</a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <div class="asd">
+                <span>ADMINISTRADOR</span>
+                <span>JULIANA</span>
+            </div>
+            <img src="../imagens/img juliana.png" alt="Juliana">
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="filter">
+            <label for="category">Categoria</label>
+            <select id="category">
+                <option value="">Selecione</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>COD</th>
+                    <th>AÇÕES</th>
+                    <th>SITUAÇÃO</th>
+                    <th>CATEGORIA</th>
+                    <th>DATA</th>
+                    <th>EMPRESA</th>
+                    <th>DESCRIÇÃO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-href="editaljuliana.html">
+                    <td>0123</td>
+                    <td class="status"><div class="dot waiting"></div></td>
+                    <td>AGUARDANDO RESPOSTA</td>
+                    <td>SAUDE</td>
+                    <td>26/05/2024</td>
+                    <td>SaudeMais LTDA</td>
+                    <td>buscando oportunidade...</td>
+                </tr>
+                <tr data-href="projeto2.html">
+                    <td>0103</td>
+                    <td class="status"><div class="dot completed"></div></td>
+                    <td>CONCLUIDO</td>
+                    <td>EDUCAÇÃO</td>
+                    <td>30/04/2024</td>
+                    <td>VIXeduca ME</td>
+                    <td>visando uma melhor...</td>
+                </tr>
+                <tr data-href="projeto3.html">
+                    <td>0089</td>
+                    <td class="status"><div class="dot completed"></div></td>
+                    <td>CONCLUIDO</td>
+                    <td>SAUDE</td>
+                    <td>25/03/2024</td>
+                    <td>voceBEM LTDA</td>
+                    <td>sabendo das dificuldades...</td>
+                </tr>
+                <tr data-href="projeto4.html">
+                    <td>0112</td>
+                    <td class="status"><div class="dot waiting"></div></td>
+                    <td>AGUARDANDO RESPOSTA</td>
+                    <td>LAZER</td>
+                    <td>12/05/2024</td>
+                    <td>VerdinhaRelax EPP</td>
+                    <td>Com os hábitos de hoje em...</td>
+                </tr>
+                <tr data-href="projeto5.html">
+                    <td>0092</td>
+                    <td class="status"><div class="dot denied"></div></td>
+                    <td>NEGADO</td>
+                    <td>CULTURA</td>
+                    <td>31/03/2024</td>
+                    <td>SomosTodes ME</td>
+                    <td>Fizemos o L e queremos...</td>
+                </tr>
+                <tr data-href="projeto6.html">
+                    <td>0129</td>
+                    <td class="status"><div class="dot pending"></div></td>
+                    <td>SEM ANÁLISE</td>
+                    <td>ASSIT. SOCIAL</td>
+                    <td>26/05/2024</td>
+                    <td>todaAJUDA LTDA</td>
+                    <td>Temos facilidade com...</td>
+                </tr>
+                <tr data-href="projeto7.html">
+                    <td>0101</td>
+                    <td class="status"><div class="dot denied"></div></td>
+                    <td>NEGADO</td>
+                    <td>MEIO AMBIENTE</td>
+                    <td>06/04/2024</td>
+                    <td>PauMaisBRasil LTDA</td>
+                    <td>A importância da preserva...</td>
+                </tr>
+                <tr data-href="projeto8.html">
+                    <td>0095</td>
+                    <td class="status"><div class="dot completed"></div></td>
+                    <td>CONCLUIDO</td>
+                    <td>ESPORTE</td>
+                    <td>02/04/2024</td>
+                    <td>ProSport ME</td>
+                    <td>A importância da...</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagination">
+            <div class="pagination-buttons">
+                <button>&laquo; Anterior</button>
+                <button>Próximo &raquo;</button>
+            </div>
+            <div class="items-per-page">
+                <label for="items-per-page">Itens por página:</label>
+                <select id="items-per-page">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const rows = document.querySelectorAll("table tbody tr");
+
+            rows.forEach(row => {
+                row.addEventListener("click", function() {
+                    const href = row.getAttribute("data-href");
+                    if (href) {
+                        window.location.href = href;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
