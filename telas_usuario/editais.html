@@ -7,267 +7,266 @@
     <title>Editais</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-header {
-    background-color: #157BF2;
-    padding: 10px 20px;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+        header {
+            background-color: #157BF2;
+            padding: 10px 20px;
+            color: #fff;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-header img {
-    height: 50px;
-}
+        header img {
+            height: 50px;
+        }
 
-header h1 {
-    margin-left: 20px;
-}
+        header h1 {
+            margin-left: 20px;
+            font-size: 24px;
+        }
 
-nav {
-    background-color: #157BF2;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+        nav {
+            background-color: #157BF2;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
 
-nav ul li {
-    margin: 0 15px;
-}
+        nav ul li {
+            margin: 0 15px;
+        }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.user-info {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
 
-.user-info img {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
-}
+        .user-info img {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+        }
 
-.container {
-    margin-top: 100px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.edital {
-    width: 80%;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
+        .edital {
+            width: 80%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
 
-.edital h2 {
-    margin: 0;
-    font-size: 18px;
-}
+        .edital h2 {
+            margin: 0;
+            font-size: 18px;
+        }
 
-.edital .status {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: bold;
-}
+        .edital .status {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
 
-.edital .status.aberto {
-    background-color: #4CAF50;
-    color: #fff;
-}
+        .edital .status.aberto {
+            background-color: #4CAF50;
+            color: #fff;
+        }
 
-.edital .status.fechado {
-    background-color: #f44336;
-    color: #fff;
-}
+        .edital .status.fechado {
+            background-color: #f44336;
+            color: #fff;
+        }
 
-.edital a {
-    color: #1a73e8;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .edital a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.detalhes {
-    display: none;
-    margin-top: 10px;
-}
+        .detalhes {
+            display: none;
+            margin-top: 10px;
+        }
 
-.detalhes p {
-    margin: 5px 0;
-}
+        .detalhes p {
+            margin: 5px 0;
+        }
 
-.btn-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
 
-.btn-container button {
-    padding: 8px 15px;
-    background-color: #1a73e8;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 5px 0;
-}
+        .btn-container button {
+            padding: 8px 15px;
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px 0;
+        }
 
-.btn-container button:hover {
-    background-color: #155a9c;
-}
+        .btn-container button:hover {
+            background-color: #155a9c;
+        }
 
-.btn-container .btn-fechar {
-    background-color: #f44336;
-}
+        .btn-container .btn-fechar {
+            background-color: #f44336;
+        }
 
-.btn-container .btn-fechar:hover {
-    background-color: #d32f2f;
-}
+        .btn-container .btn-fechar:hover {
+            background-color: #d32f2f;
+        }
 
-@media (max-width: 1024px) {
-    .container {
-        margin-top: 120px;
-        padding: 10px;
-    }
+        @media (max-width: 1024px) {
+            .container {
+                margin-top: 120px;
+                padding: 10px;
+            }
 
-    .edital {
-        width: 90%;
-    }
+            .edital {
+                width: 90%;
+            }
 
-    header h1 {
-        font-size: 18px;
-        margin-left: 10px;
-    }
+            header h1 {
+                font-size: 18px;
+                margin-left: 10px;
+            }
 
-    nav ul li {
-        margin: 0 10px;
-    }
+            nav ul li {
+                margin: 0 10px;
+            }
 
-    .edital h2 {
-        font-size: 16px;
-    }
+            .edital h2 {
+                font-size: 16px;
+            }
 
-    .edital .status {
-        font-size: 10px;
-        padding: 3px 7px;
-    }
+            .edital .status {
+                font-size: 10px;
+                padding: 3px 7px;
+            }
 
-    .btn-container button {
-        padding: 6px 10px;
-        font-size: 14px;
-    }
-}
+            .btn-container button {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+        }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    header h1 {
-        margin-left: 0;
-        font-size: 16px;
-    }
+            header h1 {
+                margin-left: 0;
+                font-size: 16px;
+            }
 
-    .user-info {
-        flex-direction: column;
-        align-items: center;
-    }
+            .user-info {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .user-info img {
-        margin-top: 10px;
-    }
+            .user-info img {
+                margin-top: 10px;
+            }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    nav ul li {
-        margin: 5px 0;
-    }
+            nav ul li {
+                margin: 5px 0;
+            }
 
-    .btn-container {
-        flex-direction: column;
-    }
+            .btn-container {
+                flex-direction: column;
+            }
 
-    .btn-container button {
-        width: 100%;
-        margin: 5px 0;
-        font-size: 12px;
-    }
+            .btn-container button {
+                width: 100%;
+                margin: 5px 0;
+                font-size: 12px;
+            }
 
-    .btn-container .btn-fechar {
-        width: 100%;
-    }
-}
+            .btn-container .btn-fechar {
+                width: 100%;
+            }
+        }
 
-@media (max-width: 480px) {
-    header img {
-        height: 40px;
-    }
+        @media (max-width: 480px) {
+            header img {
+                height: 40px;
+            }
 
-    header h1 {
-        font-size: 14px;
-    }
+            header h1 {
+                font-size: 14px;
+            }
 
-    nav ul li {
-        margin: 5px 0;
-        font-size: 12px;
-    }
+            nav ul li {
+                margin: 5px 0;
+                font-size: 12px;
+            }
 
-    .edital h2 {
-        font-size: 14px;
-    }
+            .edital h2 {
+                font-size: 14px;
+            }
 
-    .edital .status {
-        font-size: 8px;
-        padding: 2px 5px;
-    }
+            .edital .status {
+                font-size: 8px;
+                padding: 2px 5px;
+            }
 
-    .btn-container button {
-        padding: 5px 8px;
-        font-size: 10px;
-    }
-}
-
+            .btn-container button {
+                padding: 5px 8px;
+                font-size: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -275,31 +274,21 @@ nav a {
         <img src="../imagens/Sem título.png" alt="logo fortes">
         <nav>
             <ul>
-                <li><a href="">A Fortes</a></li>
-                <li><a href="">Setores de Atuação</a></li>
-                <li><a href="">Soluções Fortes</a></li>
-                <li><a href="" style="border-bottom: rgb(255, 255, 255) solid 2px;">Projetos Sociais</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="#">A Fortes</a></li>
+                <li><a href="#">Setores de Atuação</a></li>
+                <li><a href="#">Soluções Fortes</a></li>
+                <li><a href="#" style="border-bottom: rgb(255, 255, 255) solid 2px;">Projetos Sociais</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
         </nav>
         <div class="user-info">
             <div class="asd">
-                <span><b>Usuario</b></span>
+                <span><b>Usuário</b></span>
                 <span>Ídolo</span>
             </div>
             <img src="../imagens/basket.jpg" alt="Juliana">
         </div>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#">A Fortes</a></li>
-            <li><a href="#">Setores de Atuação</a></li>
-            <li><a href="#">Soluções Fortes</a></li>
-            <li><a href="#" style="border-bottom: black solid 2px;">Projetos Sociais</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
 
     <div class="container">
         <div class="edital">

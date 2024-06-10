@@ -19,10 +19,17 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
+            flex-wrap: wrap;
         }
 
-        header .logo h1 {
-            margin: 0;
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            max-width: 150px;
+            height: auto;
         }
 
         header nav ul {
@@ -44,6 +51,7 @@
         header .user-info {
             display: flex;
             align-items: center;
+            gap: 15px;
         }
 
         header .user-info span {
@@ -52,8 +60,8 @@
 
         header .user-info img {
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
         }
 
         .container {
@@ -77,6 +85,7 @@
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
+            margin-bottom: 20px;
         }
 
         .gallery div {
@@ -93,6 +102,21 @@
         .investment {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .btn button {
+            background-color: #007bff;
+            border: 1px solid #ffffff;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
         }
 
         @media (max-width: 768px) {
@@ -103,23 +127,59 @@
 
             .investment {
                 flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .investment div {
+                text-align: left;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            header nav ul li {
+                margin-left: 0;
             }
         }
-        .logo img{
-            max-width: 200px;
-    height: auto;
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            header .logo img {
+                max-width: 120px;
+            }
+
+            .btn button {
+                width: 100%;
+                padding: 10px;
+            }
+
+            header .user-info {
+                align-items: center;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            header .user-info img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .gallery div {
+                width: 80px;
+                height: 80px;
+                font-size: 20px;
+            }
         }
-        .asd{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .user-info{
-            gap: 15px;
-        }
-        nav li:hover {
-            border-bottom: white solid 2px;
-        }    
     </style>
 </head>
 <body>
@@ -137,12 +197,16 @@
         </nav>
         <div class="user-info">
             <div class="asd">
-                <span>ADMINISTRADOR</span>
+                <span><b>ADMINISTRADOR</b></span>
                 <span>JULIANA</span>
             </div>
             <img src="../imagens/img juliana.png" alt="Juliana">
         </div>
     </header>
+
+    <div class="btn">
+        <button onclick="back()"><b><< VOLTAR</b></button>
+    </div>
 
     <div class="container">
         <div class="section">
@@ -182,5 +246,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function back() {
+            window.location.href = 'telajuliana.html';
+        }
+    </script>
 </body>
 </html>

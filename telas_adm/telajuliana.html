@@ -73,12 +73,14 @@
         table {
             width: 100%;
             border-collapse: collapse;
+        
         }
 
         table th, table td {
             border: 1px solid #ccc;
             padding: 10px;
             text-align: left;
+        
         }
 
         table th {
@@ -95,10 +97,12 @@
             height: 15px;
             border-radius: 50%;
             display: inline-block;
+            
         }
 
         .waiting {
             background-color: yellow;
+        
         }
 
         .completed {
@@ -201,6 +205,7 @@
         nav li:hover {
             border-bottom: white solid 2px;
         }
+        
     </style>
 </head>
 <body>
@@ -218,7 +223,7 @@
         </nav>
         <div class="user-info">
             <div class="asd">
-                <span>ADMINISTRADOR</span>
+                <span><b>ADMINISTRADOR</b></span>
                 <span>JULIANA</span>
             </div>
             <img src="../imagens/img juliana.png" alt="Juliana">
@@ -236,7 +241,6 @@
             <thead>
                 <tr>
                     <th>COD</th>
-                    <th>AÇÕES</th>
                     <th>SITUAÇÃO</th>
                     <th>CATEGORIA</th>
                     <th>DATA</th>
@@ -247,71 +251,79 @@
             <tbody>
                 <tr data-href="editaljuliana.html">
                     <td>0123</td>
-                    <td class="status"><div class="dot waiting"></div></td>
-                    <td>AGUARDANDO RESPOSTA</td>
+                    <td class="status" ><div style="display: flex; align-items: center; gap: 15px;" >
+                        <div class="dot waiting"></div>AGUARDANDO RESPOSTA
+                    </div></td>
                     <td>SAUDE</td>
                     <td>26/05/2024</td>
                     <td>SaudeMais LTDA</td>
                     <td>buscando oportunidade...</td>
                 </tr>
-                <tr data-href="projeto2.html">
+                <tr data-href="editaljuliana.html">
                     <td>0103</td>
-                    <td class="status"><div class="dot completed"></div></td>
-                    <td>CONCLUIDO</td>
+                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="dot completed"></div>CONCLUIDO
+                    </div></td>
                     <td>EDUCAÇÃO</td>
                     <td>30/04/2024</td>
                     <td>VIXeduca ME</td>
                     <td>visando uma melhor...</td>
                 </tr>
-                <tr data-href="projeto3.html">
+                <tr data-href="editaljuliana.html">
                     <td>0089</td>
-                    <td class="status"><div class="dot completed"></div></td>
-                    <td>CONCLUIDO</td>
+                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="dot completed"></div>CONCLUIDO
+                    </div></td>
                     <td>SAUDE</td>
                     <td>25/03/2024</td>
                     <td>voceBEM LTDA</td>
                     <td>sabendo das dificuldades...</td>
                 </tr>
-                <tr data-href="projeto4.html">
+                <tr data-href="editaljuliana.html">
                     <td>0112</td>
-                    <td class="status"><div class="dot waiting"></div></td>
-                    <td>AGUARDANDO RESPOSTA</td>
+                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="dot waiting"></div>AGUARDANDO RESPOSTA
+                    </div></td>
                     <td>LAZER</td>
                     <td>12/05/2024</td>
                     <td>VerdinhaRelax EPP</td>
                     <td>Com os hábitos de hoje em...</td>
                 </tr>
-                <tr data-href="projeto5.html">
+                <tr data-href="editaljuliana.html">
                     <td>0092</td>
-                    <td class="status"><div class="dot denied"></div></td>
-                    <td>NEGADO</td>
+                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="dot denied"></div>NEGADO
+                    </div></td>
                     <td>CULTURA</td>
                     <td>31/03/2024</td>
                     <td>SomosTodes ME</td>
                     <td>Fizemos o L e queremos...</td>
                 </tr>
-                <tr data-href="projeto6.html">
+                <tr data-href="editaljuliana.html">
                     <td>0129</td>
-                    <td class="status"><div class="dot pending"></div></td>
-                    <td>SEM ANÁLISE</td>
+                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="dot pending"></div>SEM ANÁLISE
+                    </div></td>
                     <td>ASSIT. SOCIAL</td>
                     <td>26/05/2024</td>
                     <td>todaAJUDA LTDA</td>
                     <td>Temos facilidade com...</td>
                 </tr>
-                <tr data-href="projeto7.html">
+                <tr data-href="editaljuliana.html">
                     <td>0101</td>
-                    <td class="status"><div class="dot denied"></div></td>
-                    <td>NEGADO</td>
+                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="dot denied"></div>NEGADO
+                    </div></td>
                     <td>MEIO AMBIENTE</td>
                     <td>06/04/2024</td>
                     <td>PauMaisBRasil LTDA</td>
                     <td>A importância da preserva...</td>
                 </tr>
-                <tr data-href="projeto8.html">
+                <tr data-href="editaljuliana.html">
                     <td>0095</td>
-                    <td class="status"><div class="dot completed"></div></td>
-                    <td>CONCLUIDO</td>
+                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="dot completed"></div>CONCLUIDO
+                    </div></td>
                     <td>ESPORTE</td>
                     <td>02/04/2024</td>
                     <td>ProSport ME</td>
