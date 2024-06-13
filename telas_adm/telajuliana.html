@@ -130,16 +130,14 @@
             flex-direction: column;
             align-items: center;
         }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
         .container {
             padding: 20px;
-        }
-
-        .filter {
-            margin-bottom: 20px;
-        }
-
-        .filter label {
-            margin-right: 10px;
         }
 
         table {
@@ -210,28 +208,7 @@
             margin-right: 10px;
         }
 
-        header img {
-            max-width: 200px;
-            height: auto;
-        }
-
-        .asd {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         @media (max-width: 768px) {
-            header nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            header nav ul li {
-                margin-left: 0;
-                margin-bottom: 10px;
-            }
-
             .container {
                 padding: 10px;
             }
@@ -255,20 +232,6 @@
         }
 
         @media (max-width: 480px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            header .user-info {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            header .user-info span {
-                margin-left: 0;
-            }
-
             .container {
                 padding: 10px;
             }
@@ -305,6 +268,7 @@
 
             table tr {
                 display: block;
+                margin-bottom: 5px; /* Add space between rows */
             }
 
             table thead {
@@ -329,6 +293,7 @@
                 <li><a href="#">Editais</a></li>
                 <li><a href="#">Projetos</a></li>
                 <li><a href="#">Financeiro</a></li>
+                <li><a href="../login.html">Deslogar</a></li>
             </ul>
         </nav>
         <div class="user-info">
@@ -341,12 +306,6 @@
     </header>
 
     <div class="container">
-        <div class="filter">
-            <label for="category">Categoria</label>
-            <select id="category">
-                <option value="">Selecione</option>
-            </select>
-        </div>
         <table>
             <thead>
                 <tr>
@@ -360,7 +319,7 @@
             </thead>
             <tbody>
                 <tr data-href="editaljuliana.html">
-                    <td>0123</td>
+                    <td><b>0123</b></td>
                     <td class="status">
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div class="dot waiting"></div>AGUARDANDO RESPOSTA
@@ -372,7 +331,7 @@
                     <td>buscando oportunidade...</td>
                 </tr>
                 <tr data-href="editaljuliana.html">
-                    <td>0103</td>
+                    <td><b>0103</b></td>
                     <td class="status">
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div class="dot completed"></div>CONCLUIDO
@@ -384,7 +343,7 @@
                     <td>visando uma melhor...</td>
                 </tr>
                 <tr data-href="editaljuliana.html">
-                    <td>0089</td>
+                    <td><b>0089</b></td>
                     <td class="status">
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div class="dot completed"></div>CONCLUIDO
@@ -396,7 +355,7 @@
                     <td>sabendo das dificuldades...</td>
                 </tr>
                 <tr data-href="editaljuliana.html">
-                    <td>0112</td>
+                    <td><b>0112</b></td>
                     <td class="status">
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div class="dot waiting"></div>AGUARDANDO RESPOSTA
@@ -408,7 +367,7 @@
                     <td>Com os hábitos de hoje em...</td>
                 </tr>
                 <tr data-href="editaljuliana.html">
-                    <td>0092</td>
+                    <td><b>0092</b></td>
                     <td class="status">
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div class="dot denied"></div>NEGADO
@@ -420,7 +379,7 @@
                     <td>Fizemos o L e queremos...</td>
                 </tr>
                 <tr data-href="editaljuliana.html">
-                    <td>0129</td>
+                    <td><b>0129</b></td>
                     <td class="status">
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div class="dot pending"></div>SEM ANÁLISE
@@ -432,7 +391,7 @@
                     <td>Temos facilidade com...</td>
                 </tr>
                 <tr data-href="editaljuliana.html">
-                    <td>0101</td>
+                    <td><b>0101</b></td>
                     <td class="status">
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div class="dot denied"></div>NEGADO
@@ -444,7 +403,7 @@
                     <td>A importância da preserva...</td>
                 </tr>
                 <tr data-href="editaljuliana.html">
-                    <td>0095</td>
+                    <td><b>0095</b></td>
                     <td class="status">
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div class="dot completed"></div>CONCLUIDO

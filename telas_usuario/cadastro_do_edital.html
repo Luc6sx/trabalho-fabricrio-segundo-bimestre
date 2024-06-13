@@ -14,36 +14,118 @@
         }
 
         header {
-            background-color: #157BF2;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 10px;
-        }
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
 
-        header li {
-            text-decoration: none;
-        }
+header .logo {
+    display: flex;
+    align-items: center;
+}
 
-        nav ul {
-            background-color: #157BF2;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            list-style: none;
-            gap: 15px;
-        }
+header img {
+    max-width: 200px;
+    height: auto;
+}
 
-        header img {
-            max-width: 200px;
-            height: auto;
-        }
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-        header a {
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-        }
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .user-info span {
+    margin-left: 10px;
+}
+
+header .user-info img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-button {
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    header .user-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header .logo img {
+        max-width: 120px;
+    }
+
+    header .user-info {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    header .user-info img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 
         nav li:hover {
             border-bottom: 2px solid rgb(255, 255, 255);
@@ -147,12 +229,7 @@
         }
 
         @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: #157BF2;
-            }
+            
 
            #asd{
                 display: block;
@@ -307,23 +384,25 @@
 </head>
 <body>
     <header>
-        <img src="../imagens/Sem título.png" alt="logo fortes">
-        <button class="menu-button" id="asd" onclick="toggleMenu()">Menu</button>
+        <div class="logo">
+            <img src="../imagens/Sem título.png" alt="Logo">
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <nav>
             <ul>
-                <li><a href="">A Fortes</a></li>
-                <li><a href="">Setores de Atuação</a></li>
-                <li><a href="">Soluções Fortes</a></li>
-                <li><a href="" style="border-bottom: rgb(255, 255, 255) solid 2px;">Projetos Sociais</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Editais</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Financeiro</a></li>
+                <li><a href="../login.html">Deslogar</a></li>
             </ul>
         </nav>
         <div class="user-info">
             <div class="asd">
-                <span><b>Usuario</b></span>
-                <span>Ídolo</span>
+                <span><b>USUARIO</b></span>
+                <span>ÍDOLO</span>
             </div>
-            <img src="../imagens/basket.jpg" alt="Juliana">
+            <img src="../imagens/basket.jpg" alt="ídolo">
         </div>
     </header>
     <div>
@@ -476,40 +555,7 @@
     </div>
 </body>
 <script>
-    function toggleMenu() {
-            var menu = document.querySelector('nav ul');
-            if (menu.style.display === 'flex') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'flex';
-            }
-        }
-    function showForm(formNumber) {
-    const forms = document.querySelectorAll('form');
-    forms.forEach((form, index) => {
-        if (index + 1 === formNumber) {
-            form.style.display = 'block';
-            // Rolando a página para o topo do formulário atual
-            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else {
-            form.style.display = 'none';
-        }
-    });
-}
-
-   
-   
-        function toggleMenu() {
-            const navUl = document.querySelector("nav ul");
-            navUl.style.display = navUl.style.display === "flex" ? "none" : "flex";  
-            const screenWidth = window.innerWidth;
-            const asdButton = document.getElementById("asd");
-
-    if (screenWidth > 768) {
-        navUl.style.display = "none"; // Ocultar o menu
-        asdButton.style.display = "none"; // Ocultar o botão de menu
-    }
-            }
+    
             
 
             document.addEventListener("DOMContentLoaded", function () {
@@ -566,6 +612,11 @@ window.addEventListener('resize', () => {
                 button.style.display = 'block';
             }
         });   
+        function toggleMenu() {
+    var nav = document.querySelector('nav ul');
+    nav.classList.toggle('show');
+}
+
     </script>
 </script>
 </html>

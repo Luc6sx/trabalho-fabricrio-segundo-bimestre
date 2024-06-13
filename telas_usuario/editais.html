@@ -14,58 +14,118 @@
         }
 
         header {
-            background-color: #157BF2;
-            padding: 10px 20px;
-            color: #fff;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
 
-        header img {
-            height: 50px;
-        }
+header .logo {
+    display: flex;
+    align-items: center;
+}
 
-    
+header img {
+    max-width: 200px;
+    height: auto;
+}
 
-        nav {
-            background-color: #157BF2;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
+header nav ul li {
+    margin-left: 20px;
+}
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            
-        }
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
 
-        .user-info {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-        }
+header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-        .user-info img {
-            width: 50px;
-            height: 50px;
-            margin-left: 10px;
-        }
+header .user-info span {
+    margin-left: 10px;
+}
+
+header .user-info img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-button {
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    header .user-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header .logo img {
+        max-width: 120px;
+    }
+
+    header .user-info {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    header .user-info img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 
         .container {
             margin-top: 100px;
@@ -188,15 +248,7 @@
         }
 
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            header h1 {
-                margin-left: 0;
-                font-size: 16px;
-            }
+           
 
             .user-info {
                 flex-direction: column;
@@ -232,14 +284,7 @@
         }
 
         @media (max-width: 480px) {
-            header img {
-                height: 40px;
-            }
-
-            nav ul li {
-                margin: 5px 0;
-                font-size: 12px;
-            }
+            
 
             .edital h2 {
                 font-size: 14px;
@@ -259,22 +304,25 @@
 </head>
 <body>
     <header>
-        <img src="../imagens/Sem título.png" alt="logo fortes">
+        <div class="logo">
+            <img src="../imagens/Sem título.png" alt="Logo">
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <nav>
             <ul>
-                <li><a href="#">A Fortes</a></li>
-                <li><a href="#">Setores de Atuação</a></li>
-                <li><a href="#">Soluções Fortes</a></li>
-                <li><a href="#" style="border-bottom: rgb(255, 255, 255) solid 2px;">Projetos Sociais</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Editais</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Financeiro</a></li>
+                <li><a href="../login.html">Deslogar</a></li>
             </ul>
         </nav>
         <div class="user-info">
             <div class="asd">
-                <span><b>Usuário</b></span>
-                <span>Ídolo</span>
+                <span><b>USUARIO</b></span>
+                <span>ÍDOLO</span>
             </div>
-            <img src="../imagens/basket.jpg" alt="Juliana">
+            <img src="../imagens/basket.jpg" alt="ídolo">
         </div>
     </header>
 
@@ -341,6 +389,11 @@
             const detalhes = document.getElementById(detalhesId);
             detalhes.style.display = detalhes.style.display === 'block' ? 'none' : 'block';
         }
+        function toggleMenu() {
+    var nav = document.querySelector('nav ul');
+    nav.classList.toggle('show');
+}
+
     </script>
 </body>
 </html>
