@@ -103,6 +103,10 @@ header .user-info img {
 }
 
 @media (max-width: 480px) {
+    .btnv button {
+                width: 100%;
+                padding: 10px;
+            }
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -379,7 +383,18 @@ header .user-info img {
             height: 50px;
             margin-left: 10px;
         }
-    
+        .btnv {
+            text-align: center;
+            margin: 20px 0;
+        }
+    .btnv button{
+        background-color: #007bff;
+            border: 1px solid #ffffff;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+    }
     </style>
 </head>
 <body>
@@ -394,7 +409,6 @@ header .user-info img {
                 <li><a href="#">Editais</a></li>
                 <li><a href="#">Projetos</a></li>
                 <li><a href="#">Financeiro</a></li>
-                <li><a href="../login.html">Deslogar</a></li>
             </ul>
         </nav>
         <div class="user-info">
@@ -405,6 +419,9 @@ header .user-info img {
             <img src="../imagens/basket.jpg" alt="ídolo">
         </div>
     </header>
+    <div class="btnv">
+        <button onclick="back()"><b><< VOLTAR</b></button>
+    </div>
     <div>
     <div class="conte"></div>
     <form action="" id="form1">
@@ -555,7 +572,10 @@ header .user-info img {
     </div>
 </body>
 <script>
-    
+    function toggleMenu() {
+            const navUl = document.querySelector('header nav ul');
+            navUl.classList.toggle('show');
+        }
             
 
             document.addEventListener("DOMContentLoaded", function () {
@@ -616,6 +636,9 @@ window.addEventListener('resize', () => {
     var nav = document.querySelector('nav ul');
     nav.classList.toggle('show');
 }
+function back() {
+            window.location.href = 'editais.html';
+        }
 
     </script>
 </script>
