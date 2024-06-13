@@ -22,7 +22,6 @@
             flex-wrap: wrap;
         }
 
-
         header nav ul {
             list-style: none;
             display: flex;
@@ -71,14 +70,12 @@
         table {
             width: 100%;
             border-collapse: collapse;
-        
         }
 
         table th, table td {
             border: 1px solid #ccc;
             padding: 10px;
             text-align: left;
-        
         }
 
         table th {
@@ -95,12 +92,10 @@
             height: 15px;
             border-radius: 50%;
             display: inline-block;
-            
         }
 
         .waiting {
             background-color: yellow;
-        
         }
 
         .completed {
@@ -143,7 +138,6 @@
         header img {
             max-width: 200px;
             height: auto;
-            
         }
 
         .asd {
@@ -199,13 +193,57 @@
             header .user-info span {
                 margin-left: 0;
             }
+
+            .container {
+                padding: 10px;
+            }
+
+            .pagination {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .pagination-buttons {
+                margin-top: 10px;
+            }
+
+            .items-per-page {
+                margin-top: 10px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            table th, table td {
+                display: block;
+                text-align: left;
+                padding: 5px;
+                min-width: 120px;
+            }
+
+            table th {
+                background-color: #f4f4f4;
+            }
+
+            table tr {
+                display: block;
+            }
+
+            table thead {
+                display: block;
+            }
+
+            table tbody {
+                display: block;
+            }
         }
 
         nav li:hover {
             border-bottom: white solid 2px;
         }
-        
-        
     </style>
 </head>
 <body>
@@ -251,9 +289,11 @@
             <tbody>
                 <tr data-href="editaljuliana.html">
                     <td>0123</td>
-                    <td class="status" ><div style="display: flex; align-items: center; gap: 15px;" >
-                        <div class="dot waiting"></div>AGUARDANDO RESPOSTA
-                    </div></td>
+                    <td class="status">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="dot waiting"></div>AGUARDANDO RESPOSTA
+                        </div>
+                    </td>
                     <td>SAUDE</td>
                     <td>26/05/2024</td>
                     <td>SaudeMais LTDA</td>
@@ -261,9 +301,11 @@
                 </tr>
                 <tr data-href="editaljuliana.html">
                     <td>0103</td>
-                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="dot completed"></div>CONCLUIDO
-                    </div></td>
+                    <td class="status">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="dot completed"></div>CONCLUIDO
+                        </div>
+                    </td>
                     <td>EDUCAÇÃO</td>
                     <td>30/04/2024</td>
                     <td>VIXeduca ME</td>
@@ -271,9 +313,11 @@
                 </tr>
                 <tr data-href="editaljuliana.html">
                     <td>0089</td>
-                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="dot completed"></div>CONCLUIDO
-                    </div></td>
+                    <td class="status">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="dot completed"></div>CONCLUIDO
+                        </div>
+                    </td>
                     <td>SAUDE</td>
                     <td>25/03/2024</td>
                     <td>voceBEM LTDA</td>
@@ -281,9 +325,11 @@
                 </tr>
                 <tr data-href="editaljuliana.html">
                     <td>0112</td>
-                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="dot waiting"></div>AGUARDANDO RESPOSTA
-                    </div></td>
+                    <td class="status">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="dot waiting"></div>AGUARDANDO RESPOSTA
+                        </div>
+                    </td>
                     <td>LAZER</td>
                     <td>12/05/2024</td>
                     <td>VerdinhaRelax EPP</td>
@@ -291,9 +337,11 @@
                 </tr>
                 <tr data-href="editaljuliana.html">
                     <td>0092</td>
-                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="dot denied"></div>NEGADO
-                    </div></td>
+                    <td class="status">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="dot denied"></div>NEGADO
+                        </div>
+                    </td>
                     <td>CULTURA</td>
                     <td>31/03/2024</td>
                     <td>SomosTodes ME</td>
@@ -301,9 +349,11 @@
                 </tr>
                 <tr data-href="editaljuliana.html">
                     <td>0129</td>
-                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="dot pending"></div>SEM ANÁLISE
-                    </div></td>
+                    <td class="status">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="dot pending"></div>SEM ANÁLISE
+                        </div>
+                    </td>
                     <td>ASSIT. SOCIAL</td>
                     <td>26/05/2024</td>
                     <td>todaAJUDA LTDA</td>
@@ -311,9 +361,11 @@
                 </tr>
                 <tr data-href="editaljuliana.html">
                     <td>0101</td>
-                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="dot denied"></div>NEGADO
-                    </div></td>
+                    <td class="status">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="dot denied"></div>NEGADO
+                        </div>
+                    </td>
                     <td>MEIO AMBIENTE</td>
                     <td>06/04/2024</td>
                     <td>PauMaisBRasil LTDA</td>
@@ -321,9 +373,11 @@
                 </tr>
                 <tr data-href="editaljuliana.html">
                     <td>0095</td>
-                    <td class="status"><div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="dot completed"></div>CONCLUIDO
-                    </div></td>
+                    <td class="status">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="dot completed"></div>CONCLUIDO
+                        </div>
+                    </td>
                     <td>ESPORTE</td>
                     <td>02/04/2024</td>
                     <td>ProSport ME</td>
